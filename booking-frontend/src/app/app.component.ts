@@ -10,14 +10,16 @@ import {RestarauntsComponent} from './restaraunts/restaraunts.component';
   standalone: true,
   imports: [CommonModule, RouterOutlet, RouterLink, NavbarComponent, RestarauntsComponent], // 👈 добавь CommonModule
   template: `
-    // <nav>
-      <a routerLink="/register">Регистрация</a> |
-      <a routerLink="/home">Домой</a>
-    </nav>-->
-    <router-outlet></router-outlet>
+     <div class="layout">
     <app-navbar></app-navbar>
+     <main class="main-content">
+        <router-outlet></router-outlet>
+     </main>
+    </div>
+
     <app-restaraunts></app-restaraunts>
   `,
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
 
