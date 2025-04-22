@@ -1,0 +1,365 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="abr -  это более 50 успешных проектов 15-ти концепций ресторанов, от начала до конца созданных силами компании"/>
+    <meta name="og:title" content="abr"/>
+    <meta name="og:description" content="abr -  это более 50 успешных проектов 15-ти концепций ресторанов, от начала до конца созданных силами компании"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="http://abr.kz/themes/abr-site/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://abr.kz/themes/abr-site/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://abr.kz/themes/abr-site/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="http://abr.kz/themes/abr-site/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="http://abr.kz/themes/abr-site/assets/favicon/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta property="og:site_name" content="http://abr.kz">
+    <meta property="og:url" content="http://abr.kz">
+    <meta property="og:type" content="website">
+        <link rel="stylesheet" media="all" href="http://abr.kz/themes/abr-site/assets/css/app.css?v=1743539450"/>
+    <title>abr - О нас</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L4HQCB9203"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L4HQCB9203');
+</script>
+    
+</head>
+<body data-template="about" x-data :class="{ 'overflow-hidden': $store.sidebar.toggled }">
+<!-- .wrapper -->
+<div class="wrapper">
+    <div class="wrapper-in">
+        <div class="app-widget-header" x-data="{...appWidget()}" x-init="init()" x-show="cookie" x-cloak>
+    <div class="container-fluid">
+        <div class="app-widget-header-wrap">
+            <div class="app-widget-header-left">
+                <div class="app-widget-header-btn-close" @click="hide()"><i class="icon icon-close"></i></div>
+                <div class="app-widget-header-img"><img src="http://abr.kz/themes/abr-site/assets/images/abr+-squad.svg" alt=""></div>
+                <div class="app-widget-header-title">Скачайте приложение и получите 1000 бонусов</div>
+            </div>
+                        <div class="app-widget-header-right" x-show="navJS.isIOS()">
+                <a href="https://apps.apple.com/kz/app/abr/id1499886158"
+                   class="app-widget-header-btn" @click="hide()">Скачать</a>
+            </div>
+                                    <div class="app-widget-header-right" x-show="navJS.isAndroid()">
+                <a href="https://play.google.com/store/apps/details?id=kz.abr.android&amp;hl=ru&amp;gl=US"
+                   class="app-widget-header-btn" @click="hide()">Скачать</a>
+            </div>
+                    </div>
+    </div>
+</div>
+<header class="header not-scrolled" x-data="{search: false, searchText: ''}"
+        :class="{ 'sidebar--opened': $store.sidebar.toggled }">
+    <div class="container-fluid">
+        <div class="header-in">
+            <div class="header-left">
+                <div class="btn--burger" @click.stop="$store.sidebar.toggled = !$store.sidebar.toggled">
+                    <div class="burger--icon"></div>
+                </div>
+            </div>
+            <div class="header-center">
+                <a href="http://abr.kz" class="logo">
+                    <img src="http://abr.kz/themes/abr-site/assets/images/logo.svg" class="img-fluid" alt="logo"/>
+                    <img src="http://abr.kz/themes/abr-site/assets/images/logo-w.svg" class="img-fluid" alt="logo"/>
+                </a>
+            </div>
+            <div class="header-right">
+                <div class="link-wrap" :class="{ 'search-open': search }">
+                    <a href="https://booking-web.abr.dev/" target="_blank" class="btn btn-white-sma">
+                      Забронировать стол
+                    </a>
+                </div>
+                <div class="header-search" x-cloak>
+                    <div class="header-search-wrap" x-show="search">
+                        <button @click="searchText ? searchText = '' : search = false" class="search-close"><i
+                                class="icon icon-close"></i></button>
+                        <form action="http://abr.kz/search" method="get">
+                            <input class="form-control" x-model="searchText" name="q" type="text" autocomplete="off">
+                            <button class="search-btn" type="submit"><i class="icon icon-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="" :class="{ 'search-op': search }">
+                        <button @click="search = true" class="search-toggled"><i class="icon icon-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>        <div class="sidebar" x-data="" :class="{ 'is--opened': $store.sidebar.toggled }">
+    <div class="sidebar--wrapper" @click.away="$store.sidebar.toggled = false">
+        <div class="sidebar-header">
+            <div class="btn--burger" @click="$store.sidebar.toggled = false">
+                <div class="burger--icon"></div>
+            </div>
+        </div>
+        <div class="sidebar-body">
+            
+            <div class="swithc-lng-relative" x-data="{activeLng: 'tab-1'}" style="margin-bottom: 30px;">
+                                <ul class="tab-lng">
+                    <li
+                    class="tab-lng-text"
+                    ><a href="#" class="swithc-lng">Рус</a></li>
+                                                                                                    <li @click="activeLng = 'tab-2'" 
+                    class="tab-lng-text" 
+                    ><a href="#" 
+                    data-request="onSwitchLocale"
+                    data-request-data="locale: 'kz'">Қаз</a></li>
+                                                                                <li @click="activeLng = 'tab-3'" 
+                    class="tab-lng-text" 
+                    ><a href="#" 
+                    data-request="onSwitchLocale"
+                    data-request-data="locale: 'en'">Eng</a></li>
+                                                        </ul>
+                            </div>
+            <!-- nav-main -->
+            <nav class="nav-main">
+                <nav class="nav-main">
+                    <ul class="list-inline">
+                                                                        <li role="presentation" class="active">
+                            <a href="http://abr.kz/about">
+                                О нас
+                            </a>
+                        </li>
+                                                                                                <li role="presentation" class="">
+                            <a href="http://abr.kz/restaurants">
+                                Рестораны
+                            </a>
+                        </li>
+                                                                                                                                                <li role="presentation" class="">
+                            <a href="http://abr.kz/go-green">
+                                GoGreen
+                            </a>
+                        </li>
+                                                                                                <li role="presentation" class="">
+                            <a href="http://abr.kz/career">
+                                Карьера
+                            </a>
+                        </li>
+                                                                                                <li role="presentation" class="">
+                            <a href="http://abr.kz/franchise">
+                                Франшиза
+                            </a>
+                        </li>
+                                                                                                <li role="presentation" class="">
+                            <a href="http://abr.kz/delivery">
+                                Доставка
+                            </a>
+                        </li>
+                                                                                                <li role="presentation" class="">
+                            <a href="http://abr.kz/contacts">
+                                Контакты
+                            </a>
+                        </li>
+                                                                    </ul>
+                </nav>
+            </nav><!-- end nav-main -->
+        </div>
+        <div class="sidebar-footer">
+            <ul class="list-link">
+                <li><a href="mailto:info@abr.kz">Обратная связь</a></li>
+                                <li><a href="http://abr.kz/page/public-oferta">Политика конфиденциальности</a></li>
+                                <li><a href="http://abr.kz/page/offerta">Оферта</a></li>
+                                <li><a href="http://abr.kz/page/cloud-payments">Cloud Payments</a></li>
+                                <li><a href="http://abr.kz/page/politika-konfidencialnosti-kurerov">Политика конфиденциальности курьеров</a></li>
+                                <li><a href="http://abr.kz/page/referral-program">Условия реферальной программы</a></li>
+                            </ul>
+            <ul class="social-list">
+                                    <li><a href="https://www.facebook.com/abrest" target="_blank"><i class="icon icon-fb"></i></a></li>
+                                    <li><a href="https://www.instagram.com/abr.kz/" target="_blank"><i class="icon icon-ins"></i></a></li>
+                            </ul>
+        </div>
+    </div>
+</div>        <main class="content">
+            <div class='page--about'>
+                <section class="section section-about">
+    <div class="section-wrap container">
+        <div class="section-head">
+            <div class="section-title">О нас</div>
+        </div>
+        <div class="section-content">
+                        <div class="media">
+                <div class="img" style="background-image: url(http://abr.kz/storage/app/uploads/public/607/e4f/e8d/607e4fe8dd494103681120.jpg)"></div>
+            </div>
+                        <div class="">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="section-content-title">
+                            <p><strong>abr - это более 15 ресторанных концепций,<br>раскрывающих новые грани вкуса.</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="about-description">
+                            <div class="about-description-desc"><p dir="ltr">50 ресторанов, 1638 сотрудников, 7 миллионов гостей в год. Это лишь малая часть 13-летнего опыта компании abr в ресторанной индустрии. Начав с пивного ресторана “Бочонок”, мы трансформировались в сообщество людей, которые двигают вперед гастрономическую культуру &nbsp;Казахстана. Новаторские концепции ресторанов и ужинов, фестивали, сотрудничество с топовыми мировыми шефами и бартендерами, а также бесконечное обновление и поиск новых идей — &nbsp;мы те, кто задает тренды.</p></div>
+                                                        <div class="about-description-main">
+                                <img src="http://abr.kz/themes/abr-site/assets/images/quotes-l.svg"
+                                     class="about-description-main-icon-left" alt="">
+                                <img src="http://abr.kz/themes/abr-site/assets/images/quotes-r.svg"
+                                     class="about-description-main-icon-right" alt="">
+                                <p><em>«Мне хочется поделиться с вами тем, что сейчас действительно важно для нас: мы основали эту компанию с особой целью - делать жизнь лучше. abr - это не просто ресторанный бизнес. Это тонкий и невероятно интересный процесс, через который мы транслируем свои ценности &nbsp;и большую цель - делиться вкусом к жизни через вкус к еде. Я всегда полагал, что это важно – доверять своему чутью и следовать зову сердца, и я безмерно рад, что в этом мы схожи с каждым нашим сотрудником и гостем»&nbsp;</em>- рассказывает основатель сети Аскар Байтасов.</p>
+                            </div>
+                                                        <div class="about-description-desc"><p dir="ltr">Сегодня гастрономия - это отдельная культура, которая легко переплетается со всеми сферами нашей жизни. Она влияет на город, искусство, моду и многое другое, и мы доказываем это своими проектами. Легко сплетая урбанистику и рестораторство, мы рассказываем истории через проекты вроде Urbanitarium. Задумываясь о будущем нашего города и планеты, мы внедряем инициативу Go Green.</p></div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="about-bord">
+                            <div class="about-bord-wrap">
+                                                                <div class="about-bord-item">
+                                    <div class="about-bord-item-num">13</div>
+                                    <div class="about-bord-item-title">лет</div>
+                                </div>
+                                                                <div class="about-bord-item">
+                                    <div class="about-bord-item-num">50</div>
+                                    <div class="about-bord-item-title">ресторанов</div>
+                                </div>
+                                                                <div class="about-bord-item">
+                                    <div class="about-bord-item-num">7</div>
+                                    <div class="about-bord-item-title">млн. гостей в год</div>
+                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>            </div>
+        </main>
+        <footer class="footer">
+    <div class="footer-sup">
+        <div class="container">
+            <div class="footer-sup-wrap">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-nav row">
+                            <div class="footer-nav-item">
+                                <div class="footer-title">Наши рестораны</div>
+                                <ul class="footer-list-to-half">
+                                                                        <li><a href="http://abr.kz/restaurant/auyl">AUYL</a></li>
+                                                                        <li><a href="http://abr.kz/restaurant/spiros">SPIROS</a></li>
+                                                                        <li><a href="http://abr.kz/restaurant/tor">TÖR</a></li>
+                                                                        <li><a href="http://abr.kz/restaurant/astra-grand-cafe">Astra Grand Cafe</a></li>
+                                                                        <li><a href="http://abr.kz/restaurant/bistro-blanca">Bistro Blanca</a></li>
+                                                                        <li><a href="http://abr.kz/restaurant/raw">RAW</a></li>
+                                                                        <li><a href="http://abr.kz/restaurant/del-papa">Del Papa</a></li>
+                                                                        <li><a href="http://abr.kz/restaurant/aroma">Aroma</a></li>
+                                                                        <li><a href="http://abr.kz/restaurant/bistro-alma">bistro Alma</a></li>
+                                                                        <li><a href="http://abr.kz/restaurant/jinau">JINAU</a></li>
+                                                                        <li><a href="http://abr.kz/restaurant/ogonyok">Огонёк</a></li>
+                                                                        <li><a href="http://abr.kz/restaurant/luckee-yu">Luckee Yu</a></li>
+                                                                        <li><a href="http://abr.kz/restaurant/daredzhani">Дареджани</a></li>
+                                                                        <li><a href="http://abr.kz/restaurant/afisha">Афиша</a></li>
+                                                                        <li><a href="http://abr.kz/restaurant/cafeteria">Cafeteria</a></li>
+                                                                        <li><a href="http://abr.kz/restaurant/syn32">ŠYÑ32</a></li>
+                                                                        <li><a href="http://abr.kz/restaurant/coco">COCO</a></li>
+                                                                        <li><a href="http://abr.kz/restaurant/brodvej-burger">Broadway Burger</a></li>
+                                                                    </ul>
+                            </div>
+                            <div class="footer-nav-item">
+                                <div class="footer-title">Компания</div>
+                                    <ul>
+            <li role="presentation" class="active  ">
+                    <a href="http://abr.kz/about" >
+                About us
+            </a>
+        
+            </li>
+    <li role="presentation" class="  ">
+                    <a href="http://abr.kz/loyalty-program" >
+                Loyalty program
+            </a>
+        
+            </li>
+    <li role="presentation" class="  ">
+                    <a href="http://abr.kz/go-green" >
+                GoGreen
+            </a>
+        
+            </li>
+    <li role="presentation" class="  ">
+                    <a href="http://abr.kz/career" >
+                Career
+            </a>
+        
+            </li>
+    <li role="presentation" class="  ">
+                    <a href="http://abr.kz/franchise" >
+                Franchise
+            </a>
+        
+            </li>
+    <li role="presentation" class="  ">
+                    <a href="http://abr.kz/delivery" >
+                Delivery
+            </a>
+        
+            </li>
+    <li role="presentation" class="  ">
+                    <a href="http://abr.kz/contacts" >
+                Contacts
+            </a>
+        
+            </li>
+    </ul>
+                            </div>
+                            <div class="footer-nav-item">
+                                <div class="footer-title">Помощь</div>
+                                                                <ul>
+                                    <li><a href="mailto:info@abr.kz">Обратная связь</a></li>
+                                                                        <li><a href="http://abr.kz/page/public-oferta">Политика конфиденциальности</a></li>
+                                                                        <li><a href="http://abr.kz/page/offerta">Оферта</a></li>
+                                                                        <li><a href="http://abr.kz/page/cloud-payments">Cloud Payments</a></li>
+                                                                        <li><a href="http://abr.kz/page/politika-konfidencialnosti-kurerov">Политика конфиденциальности курьеров</a></li>
+                                                                        <li><a href="http://abr.kz/page/referral-program">Условия реферальной программы</a></li>
+                                                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="row row-md-aligen-c">
+                            <div class="col-3">
+                                <div class="footer-title">Мы в соц.сетях</div>
+                                <ul class="social-list">
+                                                                        <li><a href="https://www.facebook.com/abrest" target="_blank"><i class="icon icon-fb"></i></a></li>
+                                                                        <li><a href="https://www.instagram.com/abr.kz/" target="_blank"><i class="icon icon-ins"></i></a></li>
+                                                                    </ul>
+                            </div>
+                            <div class="col-3">
+                                <a href="http://abr.kz" class="logo"><img src="http://abr.kz/themes/abr-site/assets/images/logo-w.svg" class="img-fluid" alt="" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-sub">
+        <div class="container">
+            <div class="copyright">© 2025 все права защищены.</div>
+        </div>
+    </div>
+</footer>    </div>
+</div><!-- end .wrapper -->
+<!-- BEGIN content -->
+<!-- <div class="out">
+</div> -->
+<!-- END content -->
+<!-- BEGIN scripts -->
+<!-- <script type="text/javascript" src="js/vendor.js"></script> -->
+<script type="text/javascript" src="http://abr.kz/themes/abr-site/assets/js/jquery.js"></script>
+<script type="text/javascript" src="http://abr.kz/themes/abr-site/assets/js/app.js"></script>
+<!-- END scripts -->
+<script src="/modules/system/assets/js/framework.js"></script>
+<script src="/modules/system/assets/js/framework.extras.js"></script>
+<link rel="stylesheet" property="stylesheet" href="/modules/system/assets/css/framework.extras.css">
+<script src="http://abr.kz/plugins/renatio/formbuilder/assets/js/form.js"></script>
+
+</body>
+</html>

@@ -7,6 +7,8 @@ import {RefugioComponent} from './refugio/refugio.component';
 import {HaragunComponent} from './haragun/haragun.component';
 import {AizaComponent} from './aiza/aiza.component';
 import {BestiaComponent} from './bestia/bestia.component';
+import {InfoComponent} from './info/info.component';
+import{ContactsComponent} from './contacts/contacts.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'register', pathMatch: 'full' },
@@ -16,9 +18,10 @@ const routes: Routes = [
   { path: 'refugio', component:RefugioComponent },
   { path: 'haragun', component: HaragunComponent},
   { path: 'aiza', component: AizaComponent},
-  { path: 'bestia', component: BestiaComponent}
+  { path: 'bestia', component: BestiaComponent},
+  { path: 'info', component: InfoComponent},
+  { path: 'contacts', component:ContactsComponent }
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
